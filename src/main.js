@@ -67,7 +67,7 @@ const calc = (num1, num2, arit) => {
     default:
       break;
   }
-  return result;
+  return result.toFixed(4);
 };
 
 //-----------------------Start Program-----------------------------------------//
