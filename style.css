@@ -1,5 +1,6 @@
 html{
     font-size: 62.5%;
+    font-family: 'Inconsolata', monospace;
 }
 
 *{
@@ -14,40 +15,57 @@ main{
     align-items: center;
     height: 100vh;
     width: 100%;
+    background-image: url(./assets/imgs/HD-wallpaper-math-background-and-for-pngtree-math-teacher.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .calculator__container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 400px;
     min-width: 350px;
-    height: 80%;
-    background-color: antiquewhite;
+    height: auto;
     border-radius: 25px;
+    /*----------------*/
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    /*border-radius: 10px; /* Borde redondeado
+    padding: 20px; Margen interior */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
 }
 .calculator__output{
-    height: 150px;
+    height: 125px;
     margin: 32px 8px;
+    padding: 12px;
     width: 90%;
     background-color: aliceblue;
     border-radius: 25px;
+    font-weight: bold;
+    text-align: end;
+    font-size: 4.8rem;
 }
 
 .calculator__keyboard{
     display: grid;
     grid-template-columns: repeat(4,minmax(50px,25%));
     grid-template-rows: repeat(5,minmax(50px,25%));
+    place-items: center;
     width: 90%;
     height: 60%;
     gap: 10px;
+    margin-bottom: 32px;
 }
 
 #Reset{
     grid-column:span 4;
+    width: 100%;
 }
 
 .keyboard__button{
     border-radius: 25px;
+    width: 50px;
+    height: 50px;
 }

@@ -3,6 +3,7 @@
 let numberSaved = 0;
 let operatorSelect = null;
 let flag = 0;
+const operatorsList = ["+","-","*","/","Enter"]
 
 //-----------Functions-----------------------//
 
@@ -34,7 +35,7 @@ const selectOperator = (operator) => {
       operatorSelect
     );
     outputNode.innerText = result;
-    if (operator != "=") {
+    if (operator != "Enter") {
       operatorSelect = operator;
     } else {
       operatorSelect = null;
@@ -53,11 +54,11 @@ const calc = (num1, num2, arit) => {
     case "-":
       result = num1 - num2;
       break;
-    case "x":
+    case "*":
       result = num1 * num2;
       break;
-    case "÷":
-      if ((num1 == 0) | (num2 == 0)) {
+    case "/":
+      if ((num1 == 0) || (num2 == 0)) {
         alert("No se puede dividir entre cero");
       } else {
         result = num1 / num2;
@@ -70,6 +71,15 @@ const calc = (num1, num2, arit) => {
 };
 
 //-----------------------Start Program-----------------------------------------//
+window.addEventListener("keydown",(ev) =>{
+  if (!isNaN(ev.key) || ev.key == ".") {
+    selectNumber(ev.key);
+    
+  } else if(operatorsList.includes(ev.key)){
+    selectOperator(ev.key);
+  }
+  console.log(ev.key);
+});
 
 (() => {
   restartButton.addEventListener("click", reset);
@@ -77,14 +87,15 @@ const calc = (num1, num2, arit) => {
   for (let index = 0; index < numbers.length; index++) {
     const element = numbers[index];
     element.addEventListener("click", () => {
-      selectNumber(element.innerText);
+      selectNumber(element.value);
     });
   }
 
   for (let index = 0; index < operators.length; index++) {
     const element = operators[index];
     element.addEventListener("click", () => {
-      selectOperator(element.innerText);
+      selectOperator(element.value);
     });
   }
 })();
+

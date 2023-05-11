@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;600&display=swap" rel="stylesheet">
     <title>Calculadora</title>
 </head>
+
 <body>
     <main>
         <div class="calculator__container">
             <p class="calculator__output">
             <div class="calculator__keyboard">
-                <button class="keyboard__button number">9</button>
-                <button class="keyboard__button number">8</button>
-                <button class="keyboard__button number">7</button>
-                <button class="keyboard__button number">6</button>
-                <button class="keyboard__button number">5</button>
-                <button class="keyboard__button number">4</button>
-                <button class="keyboard__button number">3</button>
-                <button class="keyboard__button number">2</button>
-                <button class="keyboard__button number">1</button>
-                <button class="keyboard__button number">0</button>
-                <button class="keyboard__button number">.</button>
-                <button class="keyboard__button operator">=</button>
-                <button class="keyboard__button operator">+</button>
-                <button class="keyboard__button operator">-</button>
-                <button class="keyboard__button operator">x</button>
-                <button class="keyboard__button operator">÷</button>
+                <button class="keyboard__button number" value="9">9</button>
+                <button class="keyboard__button number" value="8">8</button>
+                <button class="keyboard__button number" value="7">7</button>
+                <button class="keyboard__button number" value="6">6</button>
+                <button class="keyboard__button number" value="5">5</button>
+                <button class="keyboard__button number" value="4">4</button>
+                <button class="keyboard__button number" value="3">3</button>
+                <button class="keyboard__button number" value="2">2</button>
+                <button class="keyboard__button number" value="1">1</button>
+                <button class="keyboard__button number" value="0">0</button>
+                <button class="keyboard__button number" value=".">.</button>
+                <button class="keyboard__button operator" value="Enter">=</button>
+                <button class="keyboard__button operator" value="+">+</button>
+                <button class="keyboard__button operator" value="-">-</button>
+                <button class="keyboard__button operator" value="*">x</button>
+                <button class="keyboard__button operator" value="/">÷</button>
                 <button class="keyboard__button" id="Reset">CE</button>
             </div>
         </div>
@@ -35,4 +40,5 @@
     <script src="./src/nodes.js"></script>
     <script src="./src/main.js"></script>
 </body>
+
 </html>
