@@ -67,7 +67,11 @@ const calc = (num1, num2, arit) => {
     default:
       break;
   }
-  return result.toFixed(4);
+  if (typeof result === "number" && Number.isInteger(result)) {
+    return result;
+  } else {
+    return result.toFixed(2);
+  }
 };
 
 //-----------------------Start Program-----------------------------------------//
